@@ -31,9 +31,20 @@ app.add_middleware(
 
 # --- DATABASE CONFIG ---
 # We use os.getenv to pull from your .env file safely
+# SUPABASE_URL = os.getenv("SUPABASE_URL")
+# SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+# supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("CRITICAL ERROR: Supabase environment variables are missing!")
+    # We initialize with empty strings just to let the app start 
+    # so you can see the error in the logs instead of a crash.
+    supabase = None 
+else:
+    supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def get_blind_hash(ip_address: str):
     # This fulfills your "Zero Identity Stored" promise
