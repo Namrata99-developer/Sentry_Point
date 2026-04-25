@@ -4,10 +4,10 @@
   <p><b>Anonymous Incident Reporting & Safety Mapping System</b></p>
   <p><i>Turning community fear into actionable community data.</i></p>
 
-  <a href="YOUR_VERCEL_URL">
+  <a href="https://sentry-point-app.vercel.app/">
     <img src="https://img.shields.io/badge/Demo-Live_on_Vercel-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo" />
   </a>
-  <a href="YOUR_VIDEO_URL">
+  <a href="https://www.loom.com/share/a001ff4aa78542e5a7316c78d2cef0b9">
     <img src="https://img.shields.io/badge/Video-Pitch_%26_Demo-red?style=for-the-badge&logo=youtube" alt="Pitch Video" />
   </a>
 </div>
